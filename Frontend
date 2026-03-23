@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking Company</title>
+</head>
+<body>
+
+    <h1>Hello, Welcome to My Tracking Company</h1>
+
+    <!-- Button -->
+    <button onclick="showMessage()">Click Me</button>
+
+    <!-- Output text -->
+    <p id="output"></p>
+
+    <!-- Link JS file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
