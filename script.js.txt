@@ -1,0 +1,15 @@
+script.js
+
+function login() {
+  // Redirect to Entra ID login page
+  window.location.href = "https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/authorize?client_id=<frontend-client-id>&response_type=token&redirect_uri=https://frontend.azurewebsites.net/login.html&scope=api://<backend-client-id>/api.read";
+}
+
+function loadProducts(token) {
+  fetch("https://backend.azurewebsites.net/api/products", {
+    headers: { "Authorization": "Bearer " + token }
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("products").innerHTML = JSON.stringify(data);
+  });
